@@ -1,0 +1,102 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: Arial, sans-serif; background: #ffffff; color: #073f32; line-height: 1.5; }
+.header, .hero, .programs, .mission, .footer-content { width: 100%; }
+.header { min-height: 95px; padding: 12px 5%; display: flex; justify-content: space-between; align-items: center; gap: 20px; background: rgb(222, 220, 224); }
+.logo-area { display: flex; align-items: center; gap: 12px; }
+.logo-area img { width: 82px; height: 82px; object-fit: contain; }
+.brand h2 { font-size: 17px; line-height: 1.25; color: #064c3c; }
+.brand p { font-style: italic; font-weight: bold; margin-top: 4px; color: #08734e; }
+.navbar { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.navbar a { text-decoration: none; color: #222; font-size: 14px; padding: 11px 15px; border-radius: 9px; transition: .3s; }
+.navbar a:hover, .navbar .active { background: #07864e; color: white; }
+.hero { min-height: 390px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; background: #f3f9f5; overflow: hidden; }
+.hero-content { padding: 35px 8%; z-index: 1; }
+.hero-content h1 { font-size: clamp(34px, 4vw, 55px); line-height: 1.05; color: #064c3c; margin-bottom: 18px; }
+.hero-content > p { font-size: 19px; color: #222; margin-bottom: 12px; }
+.hero-content .location { font-size: 15px; font-weight: 500; }
+.hero-image { height: 400px; width: 100%; }
+.hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
+.btn { display: inline-block; padding: 14px 20px; border-radius: 35px; text-decoration: none; font-weight: bold; font-size: 15px; text-align: center; box-shadow: 0 5px 12px rgba(0,0,0,.15); transition: .3s; }
+.support-btn { background: #ffcc16; color: #064c3c; }
+.donate-btn { background: #f52222; color: white; }
+.btn:hover { transform: translateY(-4px); box-shadow: 0 8px 18px rgba(0,0,0,.2); }
+.programs { display: grid; grid-template-columns: repeat(4, 1fr); padding: 30px 5%; gap: 0; background: #e0e275; }
+.program-card { text-align: center; padding: 15px 18px; border-right: 1px solid #e1e7e3; }
+.program-card:last-child { border-right: none; }
+.icon { width: 82px; height: 82px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 34px; margin: 0 auto 12px; color: white; }
+.green { background: #078b52; } .yellow { background: #ffb800; } .blue { background: #1689df; }
+.program-card h3 { font-size: 18px; margin-bottom: 8px; color: #064c3c; }
+.program-card p { font-size: 14px; color: #33443f; }
+.mission { width: 90%; margin: 15px auto 25px; padding: 22px 35px; min-height: 150px; display: flex; align-items: center; justify-content: center; gap: 35px; background: #9cdda2; border-radius: 14px; }
+.mission-image { font-size: 75px; }
+.mission-text h2 { font-size: 32px; color: #064c3c; }
+.mission-text p { font-size: 18px; color: #253d35; }
+.mission-text span { display: block; width: 100px; height: 3px; background: #012013; margin-top: 15px; }
+footer { background: #004437; color: white; }
+.footer-content { display: grid; grid-template-columns: 1.3fr 1fr 1fr; padding: 25px 5%; gap: 30px; }
+.footer-brand, .footer-links { border-right: 1px solid rgba(255,255,255,.5); }
+.footer-brand h3 { font-size: 16px; }
+.footer-brand p { font-style: italic; margin-top: 8px; }
+.footer-links { display: flex; flex-direction: column; }
+.footer-links a { color: white; text-decoration: none; font-size: 14px; }
+.footer-links a:hover { color: #ffcc16; }
+.footer-location { font-size: 14px; }
+.footer-location p { margin-bottom: 12px; }
+.copyright { text-align: center; padding: 12px; font-size: 12px; background: #00372e; }
+/* About page additions use the home page palette and typography. */
+.about-main { width: min(1000px, 90%); margin: 0 auto; padding: 30px 0 42px; }
+.about-title { color: #064c3c; font-size: clamp(30px, 4vw, 42px); line-height: 1.1; margin-bottom: 20px; }
+.about-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: center; }
+.about-photo { width: 100%; height: 300px; object-fit: cover; object-position: center 42%; border-radius: 12px; display: block; }
+.about-copy h2, .about-section-title { color: #064c3c; font-size: 23px; margin-bottom: 8px; }
+.about-copy p { color: #33443f; margin-bottom: 10px; }
+.about-team { color: #08734e; font-weight: bold; font-size: 14px; }
+.about-purpose { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 22px 0; }
+.about-purpose article { border-radius: 12px; padding: 17px 20px; background: #f3f9f5; border-left: 5px solid #07864e; }
+.about-purpose h2 { color: #064c3c; font-size: 20px; margin-bottom: 5px; }
+.about-purpose p { color: #33443f; font-size: 15px; }
+.about-objectives { display: flex; align-items: center; flex-wrap: wrap; gap: 9px; padding: 14px 17px; border-radius: 12px; background: #9cdda2; }
+.about-objectives strong { margin-right: 4px; color: #064c3c; }
+.objective-pill { background: #fff; border-radius: 22px; padding: 5px 11px; color: #073f32; font-size: 13px; }
+.about-programs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; margin-top: 12px; }
+.about-program { display: flex; align-items: flex-start; gap: 11px; padding: 13px 14px; border: 1px solid #dce6df; border-radius: 10px; background: #fff; }
+.about-number { flex: 0 0 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; background: #078b52; color: #fff; font-size: 12px; font-weight: bold; }
+.about-program h3 { color: #064c3c; font-size: 15px; margin-bottom: 2px; }
+.about-program p { color: #33443f; font-size: 13px; line-height: 1.4; }
+.about-footer { text-align: center; padding: 15px; font-size: 13px; background: #004437; color: #fff; }
+@media (max-width: 850px) {
+  .header { flex-direction: column; padding: 15px; }
+  .navbar { flex-wrap: wrap; justify-content: center; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-content { padding: 35px 7%; }
+  .hero-image { height: 300px; }
+  .programs { grid-template-columns: repeat(2, 1fr); }
+  .program-card:nth-child(2) { border-right: none; }
+  .footer-content { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 500px) {
+  .brand h2 { font-size: 13px; }
+  .logo-area img { width: 65px; height: 65px; }
+  .navbar a { font-size: 12px; padding: 9px; }
+  .hero-content h1 { font-size: 36px; }
+  .hero-content > p { font-size: 16px; }
+  .hero-buttons { flex-direction: column; align-items: stretch; }
+  .programs { grid-template-columns: 1fr 1fr; padding: 20px 3%; }
+  .program-card { padding: 12px 8px; }
+  .program-card h3 { font-size: 15px; }
+  .program-card p { font-size: 12px; }
+  .icon { width: 65px; height: 65px; font-size: 27px; }
+  .mission { padding: 20px; gap: 12px; }
+  .mission-image { font-size: 45px; }
+  .mission-text h2 { font-size: 24px; }
+  .mission-text p { font-size: 14px; }
+  .footer-content { grid-template-columns: 1fr; }
+  .footer-brand, .footer-links { border-right: none; border-bottom: 1px solid rgba(255,255,255,.3); padding-bottom: 15px; }
+  .about-main { width: 92%; padding: 24px 0 32px; }
+  .about-intro, .about-purpose, .about-programs { grid-template-columns: 1fr; }
+  .about-photo { height: 240px; }
+  .about-objectives { align-items: flex-start; }
+  .about-objectives strong { width: 100%; }
+}
